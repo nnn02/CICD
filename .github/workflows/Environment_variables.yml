@@ -4,7 +4,7 @@ jobs:
     run:
         runs-on: ubuntu-latest
         env:
-            BRANCH: ${ { github.ref_name } }   # 環境変数BRANCHにブランチ名を設定
+            BRANCH: ${{ github.ref_name }}   # 環境変数BRANCHにブランチ名を設定
         steps:
             - run: echo "${BRANCH}"         # 環境変数BRANCHの値を表示
             - uses: actions/checkout@v4

@@ -1,0 +1,8 @@
+name: Contexts
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "{{ github.repository }}"         # リポジトリ名を表示
+            - run: echo "{{ github.event_name }}"         # イベント名を表示
